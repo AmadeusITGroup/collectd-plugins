@@ -12,7 +12,9 @@ plugins.
 
 ```
 # use the provided types.db
-TypesDB /usr/share/collectd/types.db /usr/share/collectd/types-amadeus.db
+TypesDB "/usr/share/collectd/types.db" "/usr/share/collectd/types-amadeus.db"
+
+LoadPlugin perl
 
 <Plugin perl>
   BaseName "Collectd::Plugins"
