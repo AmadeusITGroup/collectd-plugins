@@ -26,7 +26,7 @@
 
 =head1 Collectd::Plugins::Vmmemctl
 
-A plugin from collectd to read VMware memory ballooning statistics from
+A plugin for collectd to read VMware memory ballooning statistics from
 F</sys/kernel/debug/vmmemctl>. The plugin requires Linux, the C<vmw_balloon>
 module and a C<debugfs> mounted on F</sys/kernel/debug> (the default).
 
@@ -102,7 +102,7 @@ sub vmmemctl_read {
 		$prim_no_sleep_alloc, $prim_no_sleep_alloc_failed,
 		$prim_can_sleep_alloc, $prim_can_sleep_alloc_failed,
 		$prim_free, $err_alloc, $err_free) = $content =~ EXTRACT_RE;
-       
+
 	unless (defined($target)) {
 		ERROR("Extractor did not match");
 		return 0;
