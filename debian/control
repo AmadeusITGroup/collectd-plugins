@@ -1,0 +1,16 @@
+Source: collectd-plugins-amadeus
+Section: net
+Priority: extra
+Maintainer: Amadeus Open Source Team <opensource@amadeus.com>
+Build-Depends: debhelper (>= 9.0.0)
+Standards-Version: 3.9.4
+Homepage: https://github.com/AmadeusITGroup/collectd-plugins-amadeus
+Vcs-Git: git://github.com/AmadeusITGroup/collectd-plugins-amadeus.git
+Vcs-Browser: https://github.com/AmadeusITGroup/collectd-plugins-amadeus
+
+Package: collectd-plugins-amadeus
+Architecture: all
+Depends: ${misc:Depends}, libfile-slurp-perl
+Suggests:
+Description: Additional collectd plugins
+ Additional collectd plugins by Amadeus Germany GmbH

@@ -1,0 +1,9 @@
+/MYMETA.json
+/MYMETA.yml
+/Makefile
+/blib/
+/pm_to_blib
+/debian/*.debhelper.log
+/debian/*.substvars
+/debian/files
+/debian/collectd-plugins-amadeus/

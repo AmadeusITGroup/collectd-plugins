@@ -1,0 +1,5 @@
+collectd-plugins-amadeus (1.1.0) unstable; urgency=medium
+
+  * Initial release, containing plugin for vmmemctl
+
+ -- Thomas Weißschuh <thomas.weissschuh@de.amadeus.com>  Tue, 24 Nov 2015 13:24:52 +0000
