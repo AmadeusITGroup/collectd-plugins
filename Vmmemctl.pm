@@ -1,5 +1,25 @@
 #!/usr/bin/env perl
 
+=pod
+
+=head1 Collectd::Plugins::Vmmemctl
+
+A plugin from collectd to read VMware memory ballooning statistics from
+F</sys/kernel/debug/vmmemctl>. The plugin requires Linux, the C<vmw_balloon>
+module and a C<debugfs> mounted on F</sys/kernel/debug> (the default).
+
+=head2 Tested on
+
+=over
+
+=item * Debian Jessie
+
+=back
+
+It should also work on other systems.
+
+=cut
+
 package Collectd::Plugins::Vmmemctl;
 
 use strict;
