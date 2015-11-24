@@ -1,1 +1,1 @@
-vmmemctl pagesize:ABSOLUTE:0:U, target:GAUGE:0:U, current:GAUGE:0:U, rate_no_sleep_alloc:DERIVE:0:U, rate_sleep_alloc:DERIVE:0:U, rate_free:DERIVE:0:U
+vmmemctl pagesize:GAUGE, target:GAUGE:0:U, current:GAUGE:0:U, rate_no_sleep_alloc:GAUGE:0:U, rate_sleep_alloc:GAUGE:0:U, rate_free:GAUGE:0:U
