@@ -96,17 +96,19 @@ sub vmmemctl_read {
 		return 0;
 	}
 
+	my @matches = $content =~ EXTRACT_RE;
+
+	unless (@matches) {
+		ERROR("Extractor did not match");
+		return 0;
+	}
+
 	my ($target, $current, $rate_no_sleep_alloc, $rate_sleep_alloc,
 		$rate_free, $timer, $start, $start_failed, $guest_type, $guest_type_failed,
 		$lock, $lock_failed, $unlock, $unlock_failed, $target2, $target2_failed,
 		$prim_no_sleep_alloc, $prim_no_sleep_alloc_failed,
 		$prim_can_sleep_alloc, $prim_can_sleep_alloc_failed,
-		$prim_free, $err_alloc, $err_free) = $content =~ EXTRACT_RE;
-
-	unless (defined($target)) {
-		ERROR("Extractor did not match");
-		return 0;
-	}
+		$prim_free, $err_alloc, $err_free) = @matches;
 
 	my $vl = { plugin => PLUGIN, type => 'vmmemctl' };
 	$vl->{'values'} = [
