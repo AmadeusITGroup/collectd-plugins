@@ -18,6 +18,16 @@ module and a C<debugfs> mounted on F</sys/kernel/debug> (the default).
 
 It should also work on other systems.
 
+=head2 TODO
+
+=over
+
+=item Expose more metrics
+=item Make the status file configurable
+=item Better diagnostics (Is debugfs mounted?)
+
+=back
+
 =cut
 
 package Collectd::Plugins::Vmmemctl;
