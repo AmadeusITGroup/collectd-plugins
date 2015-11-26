@@ -112,7 +112,8 @@ sub vmmemctl_read {
 
 	my $vl = { plugin => PLUGIN, type => 'vmmemctl' };
 	$vl->{'values'} = [
-		PAGESIZE, $target, $current, $rate_no_sleep_alloc, $rate_sleep_alloc, $rate_free,
+		$target * PAGESIZE, $current * PAGESIZE,
+		$rate_no_sleep_alloc * PAGESIZE, $rate_sleep_alloc * PAGESIZE, $rate_free * PAGESIZE,
 	];
 
 	plugin_dispatch_values($vl);
